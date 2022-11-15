@@ -9,7 +9,7 @@ class Painter {
     this.paintingsList.push(painting);
   }
   get printHtml() {
-    console.log(`<h1>${this.firstName} ${this.lastName}</h1>
+    return `<h1>${this.firstName} ${this.lastName}</h1>
 <h2>${this.style}</h2>
 <ul>${this.paintingsList.map(
       (el) => `
@@ -19,7 +19,7 @@ class Painter {
         Prijs: <strong>${el.price.toLocaleString()} €</strong>
     </li>`
     )}
-</ul>`);
+</ul>`;
   }
 }
 

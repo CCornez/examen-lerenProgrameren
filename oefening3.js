@@ -7,4 +7,4 @@ david.addPainting = new Painting('script', '350x100', 220);
 david.addPainting = new Painting('Node', '40x20', 20020);
 
 console.log(david);
-david.printHtml;
+console.log(david.printHtml);
