@@ -15,16 +15,16 @@ Text.prototype.charCount = function () {
   return this.str.split(' ').length;
 };
 Text.prototype.vowelCount = function () {
-  return this.str.match(/[aeiou]/gi).length;
+  return this.str.match(/[aeiou]/gi)?.length || 0;
 };
 Text.prototype.capitalsCount = function () {
-  return this.str.match(/[A-Z]/g).length;
+  return this.str.match(/[A-Z]/g)?.length || 0;
 };
 Text.prototype.append = function (append) {
-  return this.str + append;
+  return new Text(this.str + append);
 };
 Text.prototype.prepend = function (prepend) {
-  return prepend + this.str;
+  return new Text(prepend + this.str);
 };
 
 export default Text;
